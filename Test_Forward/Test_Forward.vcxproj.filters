@@ -13,10 +13,58 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Engine">
+      <UniqueIdentifier>{aceb6d94-e3e8-4fa6-9d39-20cae1f83b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Test bench">
+      <UniqueIdentifier>{b695ba24-a6b8-4ce1-b340-b654b3ae5547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Test manager">
+      <UniqueIdentifier>{b987f48a-b2bd-4552-abe1-5f9f2e4a7602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Engine">
+      <UniqueIdentifier>{731c5204-deb9-4856-b70e-c0aff55f62d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Engine\Interface">
+      <UniqueIdentifier>{17afc43c-7b73-426f-9dec-fb1720c50e87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Test bench">
+      <UniqueIdentifier>{bf27fb19-4d83-420f-82a5-000d9f3e75fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Test manager">
+      <UniqueIdentifier>{ae1ecf7e-3b88-4e34-a3a2-5c837bae39c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractTestBench.h">
+      <Filter>Файлы заголовков\Test bench</Filter>
+    </ClInclude>
+    <ClInclude Include="Console.h">
+      <Filter>Файлы заголовков\Test manager</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCreator.h">
+      <Filter>Файлы заголовков\Test manager</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineOverheatingTestBench.h">
+      <Filter>Файлы заголовков\Test bench</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReader.h">
+      <Filter>Файлы заголовков\Test manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TestBenchCreator.h">
+      <Filter>Файлы заголовков\Test manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TestManager.h">
+      <Filter>Файлы заголовков\Test manager</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineOverheatingTest.h">
+      <Filter>Файлы заголовков\Engine\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleICEngine.h">
+      <Filter>Файлы заголовков\Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -25,6 +73,30 @@
     </ClCompile>
     <ClCompile Include="Test_Forward.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractTestBench.cpp">
+      <Filter>Исходные файлы\Test bench</Filter>
+    </ClCompile>
+    <ClCompile Include="Console.cpp">
+      <Filter>Исходные файлы\Test manager</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCreator.cpp">
+      <Filter>Исходные файлы\Test manager</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineOverheatingTestBench.cpp">
+      <Filter>Исходные файлы\Test bench</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReader.cpp">
+      <Filter>Исходные файлы\Test manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TestBenchCreator.cpp">
+      <Filter>Исходные файлы\Test manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TestManager.cpp">
+      <Filter>Исходные файлы\Test manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleICEngine.cpp">
+      <Filter>Исходные файлы\Engine</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

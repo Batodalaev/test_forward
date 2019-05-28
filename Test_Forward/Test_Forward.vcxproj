@@ -23,13 +23,12 @@
     <ProjectGuid>{7F115166-75B8-4B72-BD6B-A7D133118F14}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>TestForward</RootNamespace>
-    <WindowsTargetPlatformVersion />
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -147,15 +146,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractTestBench.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="EngineCreator.h" />
+    <ClInclude Include="EngineOverheatingTest.h" />
+    <ClInclude Include="EngineOverheatingTestBench.h" />
+    <ClInclude Include="FileReader.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="SimpleICEngine.h" />
+    <ClInclude Include="TestBenchCreator.h" />
+    <ClInclude Include="TestManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AbstractTestBench.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="EngineCreator.cpp" />
+    <ClCompile Include="EngineOverheatingTestBench.cpp" />
+    <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SimpleICEngine.cpp" />
+    <ClCompile Include="TestBenchCreator.cpp" />
+    <ClCompile Include="TestManager.cpp" />
     <ClCompile Include="Test_Forward.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
