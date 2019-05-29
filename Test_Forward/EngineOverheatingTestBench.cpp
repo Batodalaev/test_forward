@@ -28,7 +28,7 @@ void EngineOverheatingTestBench::runEngine()
 
 std::string EngineOverheatingTestBench::getResult()
 {
-	return std::to_string(getEngineOverheatingTest()->getSimulationTimeinSeconds());
+	return "Simulation time: "+std::to_string(getEngineOverheatingTest()->getSimulationTimeinSeconds());
 }
 
 void EngineOverheatingTestBench::setToutside(int Toutside)

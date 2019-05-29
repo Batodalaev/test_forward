@@ -20,6 +20,9 @@ public:
 
 	template<class T>
 	void writeln(T& data);
+
+	void clear(){ system("cls"); }
+	void pause() { system("pause"); }
 private:
 	std::istream* in = nullptr;;
 	std::ostream* out = nullptr;;

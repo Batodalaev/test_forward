@@ -5,7 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <array>
-#include "EngineOverheatingTest.h"
+#include "TestManager.h"
 
 double computeV(double V0, double a)
 {
@@ -55,42 +55,43 @@ int main()
 {
     
 	//Запуск менеджера тестов
+	TestManager manager;
+	manager.chooseTest();
 
+	//std::vector<std::array<int, 2>> MfromV { {0, 20}, { 75,75 }, { 150,100 }, { 200,105 }, { 250,75 }, { 300,0 } };
+	//int I =(10);
+	//double Hm=(0.01);
+	//double Hv=(0.0001);
+	//double C=(0.1);
+	//int Toverheat=(110);
+	//int Toutside;
 
-	std::vector<std::array<int, 2>> MfromV { {0, 20}, { 75,75 }, { 150,100 }, { 200,105 }, { 250,75 }, { 300,0 } };
-	int I =(10);
-	double Hm=(0.01);
-	double Hv=(0.0001);
-	double C=(0.1);
-	int Toverheat=(110);
-	int Toutside;
+	//while (true) {
 
-	while (true) {
+	//	std::cout << "Input Toutside: ";
+	//	std::cin >> Toutside;
 
-		std::cout << "Input Toutside: ";
-		std::cin >> Toutside;
+	//	long long Count = 0;
+	//	double Tcur = Toutside;
+	//	double V = 0;
+	//	double M = computeM(V, MfromV);
+	//	double a = computea(M, I);
+	//	double Vn = computeVn(M, Hm, V, Hv);
+	//	double Vc = 0;// computeVc(C, Toutside, Tcur);
 
-		long long Count = 0;
-		double Tcur = Toutside;
-		double V = 0;
-		double M = computeM(V, MfromV);
-		double a = computea(M, I);
-		double Vn = computeVn(M, Hm, V, Hv);
-		double Vc = 0;// computeVc(C, Toutside, Tcur);
+	//	while (Tcur < Toverheat) {
+	//		Count++;
+	//		Tcur = computeTcur(Tcur, Vn, Vc);
+	//		V = computeV(V, a);
+	//		M = computeM(V, MfromV);
+	//		a = computea(M, I);
+	//		Vn = computeVn(M, Hm, V, Hv);
+	//		Vc = computeVc(C, Toutside, Tcur);
+	//		std::cout << Tcur << std::endl;
+	//	}
+	//	std::cout << Count << " seconds" << std::endl << std::endl;
 
-		while (Tcur < Toverheat) {
-			Count++;
-			Tcur = computeTcur(Tcur, Vn, Vc);
-			V = computeV(V, a);
-			M = computeM(V, MfromV);
-			a = computea(M, I);
-			Vn = computeVn(M, Hm, V, Hv);
-			Vc = computeVc(C, Toutside, Tcur);
-			std::cout << Tcur << std::endl;
-		}
-		std::cout << Count << " seconds" << std::endl << std::endl;
-
-	}
+	//}
 	system("pause");
 	return 0;
 }
