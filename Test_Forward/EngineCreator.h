@@ -17,5 +17,6 @@ public:
 		double Hm, double Hv, double C, int Toverheat, int Toutside = 0);
 
 
+	enum typeEngine:int{None, SimpleICE};
 };
 

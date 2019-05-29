@@ -15,7 +15,7 @@ std::shared_ptr<AbstractTestBench> TestBenchCreator::getTestBench(typeTestBench 
 {
 	switch (type)
 	{
-	case TestBenchCreator::Abstract:
+	case TestBenchCreator::None:
 		return nullptr;
 		break;
 	case TestBenchCreator::EngineOverheating:

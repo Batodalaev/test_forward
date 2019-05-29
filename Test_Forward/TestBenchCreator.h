@@ -7,7 +7,7 @@ public:
 	TestBenchCreator();
 	~TestBenchCreator();
 
-	enum typeTestBench { Abstract, EngineOverheating };
+	enum typeTestBench { None, EngineOverheating };
 	
 	std::shared_ptr < AbstractTestBench> getTestBench(typeTestBench type);
 };
