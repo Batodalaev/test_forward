@@ -9,5 +9,6 @@
 class EngineInterface
 {
 public:
-	//enum testType{None,EngineOverheat};
+	//Для надлежащего уничтожения объекта
+	virtual ~EngineInterface() {};
 };

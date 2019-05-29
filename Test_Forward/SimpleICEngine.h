@@ -23,7 +23,7 @@ public:
 	//Конструктор копирования
 	SimpleICEngine(SimpleICEngine& val);
 
-	~SimpleICEngine();
+	~SimpleICEngine() override;
 
 	//only setter
 	

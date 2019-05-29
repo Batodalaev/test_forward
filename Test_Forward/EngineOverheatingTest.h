@@ -12,7 +12,7 @@ class EngineOverheatingTest:public virtual EngineInterface
 {
 public:
 	//EngineOverheatingTest();
-	//~EngineOverheatingTest();
+	~EngineOverheatingTest() {};
 
 	//никаких реализованных методов и никаких полей
 	//только нереализованные виртуальные методы(абстрактные)
