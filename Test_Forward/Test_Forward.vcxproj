@@ -149,6 +149,7 @@
     <ClInclude Include="AbstractTestBench.h" />
     <ClInclude Include="Console.h" />
     <ClInclude Include="EngineCreator.h" />
+    <ClInclude Include="EngineInterface.h" />
     <ClInclude Include="EngineOverheatingTest.h" />
     <ClInclude Include="EngineOverheatingTestBench.h" />
     <ClInclude Include="FileReader.h" />

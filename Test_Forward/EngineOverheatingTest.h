@@ -1,5 +1,6 @@
 #pragma once
 
+#include "EngineInterface.h"
 
 /*
 Класс - интерфейс взаимодействия двигателя с тестовым стендом.
@@ -7,7 +8,7 @@
 
 Цель класса: Централизовать взаимодействие тестового стенда с двигателем.
 */
-class EngineOverheatingTest
+class EngineOverheatingTest:public virtual EngineInterface
 {
 public:
 	//EngineOverheatingTest();
