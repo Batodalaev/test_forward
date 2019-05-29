@@ -11,12 +11,9 @@ public:
 	EngineCreator();
 	~EngineCreator();
 	
+	enum typeEngine :int { None, SimpleICE };
 
-	std::shared_ptr<SimpleICEngine> getSimpleICEngine();
-	std::shared_ptr<SimpleICEngine> getSimpleICEngine(std::vector<int>& arrayM, std::vector<int>& arrayV, int I,
-		double Hm, double Hv, double C, int Toverheat, int Toutside = 0);
+	std::shared_ptr<EngineInterface> getEngineInterface(typeEngine type);
 
-
-	enum typeEngine:int{None, SimpleICE};
 };
 

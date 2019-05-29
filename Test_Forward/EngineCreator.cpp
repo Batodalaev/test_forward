@@ -11,12 +11,19 @@ EngineCreator::~EngineCreator()
 {
 }
 
-std::shared_ptr<SimpleICEngine> EngineCreator::getSimpleICEngine()
+std::shared_ptr<EngineInterface> EngineCreator::getEngineInterface(typeEngine type)
 {
-	return std::shared_ptr<SimpleICEngine>(new SimpleICEngine);
-}
-
-std::shared_ptr<SimpleICEngine> EngineCreator::getSimpleICEngine(std::vector<int>& arrayM, std::vector<int>& arrayV, int I, double Hm, double Hv, double C, int Toverheat, int Toutside)
-{
-	return std::shared_ptr<SimpleICEngine>(new SimpleICEngine(arrayM,arrayV,I,Hm,Hv,C,Toverheat, Toutside));
+	switch (type)
+	{
+	case EngineCreator::None:
+		return nullptr;
+		break;
+	case EngineCreator::SimpleICE:
+		return std::shared_ptr<EngineInterface>(new SimpleICEngine);
+		break;
+	default:
+		return nullptr;
+		break;
+	}
+	return nullptr;
 }

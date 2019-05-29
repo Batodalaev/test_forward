@@ -9,6 +9,7 @@
 #include <iterator>
 #include <string>
 
+#include "SimpleICEngine.h"
 
 
 /*
@@ -29,6 +30,8 @@ public:
 
 	template<>
 	std::vector<int> read<std::vector<int>>(std::string nameValue);
+
+	void fillSimpleICEngine(std::shared_ptr<EngineInterface>& engine);
 private:
 	std::ifstream fin;
 	//https://stackoverflow.com/questions/8116808/read-integers-from-a-text-file-with-c-ifstream
