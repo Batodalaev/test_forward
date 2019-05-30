@@ -55,15 +55,19 @@ void TestManager::runTest(Test test)
 
 	testBench->setEngineInterface(engine);
 	console.writeln(">Engine placed on test bench");
+	
 	switch (test.idTypeTest)
 	{
 	case TestBenchCreator::None:
 		break;
 	case TestBenchCreator::EngineOverheating:
+	{
 		console.write(">Please input Toutside: ");
 		//one line
+		int buf = console.read<int>();
 		std::dynamic_pointer_cast<EngineOverheatingTestBench>(testBench)->
-			setToutside(console.read<int>());
+			setToutside(buf);
+	}
 		break;
 	default:
 
