@@ -76,7 +76,7 @@ int main()
 	}
 	isStopped = false;
 	//Простая версия требуемой программы
-	while (!isStopped) 
+	while (!isStopped)
 	{
 		std::vector<std::array<int, 2>> MfromV{ {0, 20}, { 75,75 }, { 150,100 }, { 200,105 }, { 250,75 }, { 300,0 } };
 		int I = (10);
@@ -86,7 +86,7 @@ int main()
 		int Toverheat = (110);
 		int Toutside;
 
-		std::cout << "Simple test"<<std::endl;
+		std::cout << "Simple test" << std::endl;
 		std::cout << "Input Toutside: ";
 		std::cin >> Toutside;
 
@@ -113,13 +113,15 @@ int main()
 		std::cout << ">If you want to quit, type quit, otherwise type any symbols" << std::endl;
 		std::string buf;
 		std::cin >> buf;
-		if (buf.compare("quit") == 0)
-			isStopped = true;
 		std::cin.clear();
 		std::cin.ignore(10000, '\n');
+
+		if (buf.compare("quit") == 0)
+			isStopped = true;
+
+		system("pause");
+		system("cls");
 	}
-	system("pause");
-	system("cls");
 	return 0;
 }
 

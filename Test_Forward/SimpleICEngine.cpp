@@ -6,7 +6,7 @@ SimpleICEngine::SimpleICEngine():
 	SimpleICEngine(
 		std::vector<int>{ 20,75,100,105,75,0 },
 		std::vector<int>{ 0,75,150,200,250,300 },
-		10,0.01,0.0001,0.1,110)
+		10,0.01,0.0001,0.1,110,0)
 {
 }
 SimpleICEngine::SimpleICEngine(std::vector<int>& arrayM, std::vector<int>& arrayV, 

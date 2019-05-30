@@ -8,8 +8,6 @@ Simple internal combustion engine
  ласс - упрощенна€ модель двигател€.
 –асчетные формулы дл€ этого двигател€ вз€ты из тестового задани€.
 
-ƒопущение:“емпература окружающей среды по умолчанию равна 0.
-
 ÷ель класса: рассчитывать изменение параметров с ходом симул€ционного времени
 */
 class SimpleICEngine: public virtual EngineOverheatingTest
@@ -19,7 +17,7 @@ public:
 	SimpleICEngine();
 	// онструктор с параметрами
 	SimpleICEngine(std::vector<int>& arrayM, std::vector<int>& arrayV, int I,
-		double Hm, double Hv, double C, int Toverheat, int Toutside=0);
+		double Hm, double Hv, double C, int Toverheat, int Toutside);
 	// онструктор копировани€
 	SimpleICEngine(SimpleICEngine& val);
 

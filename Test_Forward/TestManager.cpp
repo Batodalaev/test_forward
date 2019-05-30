@@ -66,8 +66,13 @@ void TestManager::runTest(TestData test)
 	case TestBenchCreator::EngineOverheating:
 	{
 		console.write(">Please input Toutside: ");
-		//one line
-		int buf = console.read<int>();
+		
+
+		int buf = EngineOverheatingTest::defaultToutside;
+		buf = console.read<int>();
+		console.write(">Toutside = ");
+		console.writeln(buf);
+
 		std::dynamic_pointer_cast<EngineOverheatingTestBench>(testBench)->
 			setToutside(buf);
 	}

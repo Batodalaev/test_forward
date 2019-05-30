@@ -15,6 +15,8 @@ public:
 	//EngineOverheatingTest();
 	~EngineOverheatingTest() {};
 
+	//Допущение:Температура окружающей среды по умолчанию равна 0.
+	static const int defaultToutside = 0;
 	//никаких реализованных методов и никаких полей
 	//только нереализованные виртуальные методы(абстрактные)
 
@@ -22,7 +24,7 @@ public:
 	/*
 	Установить температуру окружающей среды
 	*/
-	virtual void setToutside(int val) = 0;
+	virtual void setToutside(int val = defaultToutside) = 0;
 	/*
 	Получить температуру окружающей среды
 	*/
