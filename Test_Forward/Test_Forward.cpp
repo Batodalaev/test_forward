@@ -65,10 +65,14 @@ int main()
 		std::cout << ">If you want to quit, type quit, otherwise type any symbols" << std::endl;
 		std::string buf;
 		std::cin >> buf;
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
+
 		if (buf.compare("quit") == 0)
 			isStopped = true;
+		
+		system("pause");
 		system("cls");
-		std::cin.clear();
 	}
 	isStopped = false;
 	//Простая версия требуемой программы
@@ -111,6 +115,8 @@ int main()
 		std::cin >> buf;
 		if (buf.compare("quit") == 0)
 			isStopped = true;
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 	}
 	system("pause");
 	system("cls");

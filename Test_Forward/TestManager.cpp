@@ -15,13 +15,14 @@ TestManager::~TestManager()
 }
 void TestManager::chooseTest()
 {
+	int n = -1;
 	console.writeln(">List of tests:");
 	//Print tests
 	for (int i = 0; i != tests.size(); ++i) {
 		console.writeln(std::string("Test " + std::to_string(i) + " - " + tests[i].testname));
 	}
 	console.write(">Please input test: ");
-	int n = console.read<int>();
+	n = console.read<int>();
 	console.writeln();
 	
 	if (n < tests.size() && n >= 0) {

@@ -33,6 +33,9 @@ inline T & Console::read()
 {
 	T buf;
 	*in >> buf;
+	in->clear();
+	in->ignore(10000, '\n');
+
 	return buf;
 }
 
