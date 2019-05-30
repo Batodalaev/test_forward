@@ -11,7 +11,7 @@ public:
 	~EngineOverheatingTestBench();
 
 
-	std::shared_ptr<EngineOverheatingTest >& getEngineOverheatingTest();
+	std::shared_ptr<EngineOverheatingTest > getEngineOverheatingTest();
 
 	void runEngine() override;
 	std::string getResult() override;

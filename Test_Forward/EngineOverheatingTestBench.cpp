@@ -11,9 +11,9 @@ EngineOverheatingTestBench::~EngineOverheatingTestBench()
 {
 }
 
-std::shared_ptr<EngineOverheatingTest>& EngineOverheatingTestBench::getEngineOverheatingTest()
+std::shared_ptr<EngineOverheatingTest> EngineOverheatingTestBench::getEngineOverheatingTest()
 {
-	return std::reinterpret_pointer_cast<EngineOverheatingTest, EngineInterface>(getEngineInterface());
+	return std::dynamic_pointer_cast<EngineOverheatingTest>(ptr);
 }
 
 void EngineOverheatingTestBench::runEngine()
@@ -28,7 +28,7 @@ void EngineOverheatingTestBench::runEngine()
 
 std::string EngineOverheatingTestBench::getResult()
 {
-	return "Simulation time: "+std::to_string(getEngineOverheatingTest()->getSimulationTimeinSeconds());
+	return "Simulation time: "+std::to_string(getEngineOverheatingTest()->getSimulationTimeinSeconds()) + " seconds.";
 }
 
 void EngineOverheatingTestBench::setToutside(int Toutside)

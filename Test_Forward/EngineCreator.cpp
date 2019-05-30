@@ -19,7 +19,7 @@ std::shared_ptr<EngineInterface> EngineCreator::getEngineInterface(typeEngine ty
 		return nullptr;
 		break;
 	case EngineCreator::SimpleICE:
-		return std::shared_ptr<EngineInterface>(new SimpleICEngine);
+		return std::shared_ptr<EngineInterface>(new SimpleICEngine());
 		break;
 	default:
 		return nullptr;

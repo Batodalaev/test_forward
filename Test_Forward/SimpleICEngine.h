@@ -18,7 +18,7 @@ public:
 	//Конструктор по умолчанию
 	SimpleICEngine();
 	//Конструктор с параметрами
-	SimpleICEngine(std::vector<int> arrayM, std::vector<int> arrayV, int I,
+	SimpleICEngine(std::vector<int>& arrayM, std::vector<int>& arrayV, int I,
 		double Hm, double Hv, double C, int Toverheat, int Toutside=0);
 	//Конструктор копирования
 	SimpleICEngine(SimpleICEngine& val);
@@ -33,6 +33,7 @@ public:
 	void setI(int val);
 	void setHm(double val);
 	void setHv(double val);
+
 	void setC(double val);
 	void setToverheat(int val);
 	void setToutside(int val) override;

@@ -4,12 +4,12 @@
 
 SimpleICEngine::SimpleICEngine():
 	SimpleICEngine(
-		{ 20,75,100,105,75,0 },
-		{ 0,75,150,200,250,300 },
+		std::vector<int>{ 20,75,100,105,75,0 },
+		std::vector<int>{ 0,75,150,200,250,300 },
 		10,0.01,0.0001,0.1,110)
 {
 }
-SimpleICEngine::SimpleICEngine(std::vector<int> arrayM, std::vector<int> arrayV, 
+SimpleICEngine::SimpleICEngine(std::vector<int>& arrayM, std::vector<int>& arrayV, 
 	int I, double Hm, double Hv, double C, int Toverheat, int Toutside)
 {
 	setMfromV(arrayM,arrayV);
@@ -35,6 +35,8 @@ SimpleICEngine::~SimpleICEngine()
 
 void SimpleICEngine::setMfromV(std::vector<int> &arrayM, std::vector<int> &arrayV)
 {
+	this->arrayM.clear();
+	this->arrayV.clear();
 	this->arrayM = arrayM;
 	this->arrayV = arrayV;
 }

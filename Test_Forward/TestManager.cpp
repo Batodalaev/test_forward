@@ -62,9 +62,8 @@ void TestManager::runTest(Test test)
 	case TestBenchCreator::EngineOverheating:
 		console.write(">Please input Toutside: ");
 		//one line
-		std::reinterpret_pointer_cast<EngineOverheatingTestBench, AbstractTestBench>(testBench)->
+		std::dynamic_pointer_cast<EngineOverheatingTestBench>(testBench)->
 			setToutside(console.read<int>());
-		console.writeln(" Celsius");
 		break;
 	default:
 
@@ -79,20 +78,20 @@ void TestManager::runTest(Test test)
 }
 void TestManager::fillEngine(std::shared_ptr<EngineInterface>& engine, EngineCreator::typeEngine type, std::string filename)
 {
-	FileReader reader("Configuration file/"+filename);
+	FileReader reader("Configuration files/"+filename);
 	if (!reader.isOpen()) {
-		throw std::exception("Файл не открывается");
+		throw std::exception("File cannot open or not finded");
 	}
 	switch (type)
 	{
 	case EngineCreator::None:
-		throw std::exception("Некорректный тип двигателя");
+		throw std::exception("Incorrect type engine");
 		break;
 	case EngineCreator::SimpleICE:
 		reader.fillSimpleICEngine(engine);
 		break;
 	default:
-		throw std::exception("Тип двигателя не найден");
+		throw std::exception("Engine type not finded");
 		break;
 	}
 

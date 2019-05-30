@@ -12,7 +12,7 @@ public:
 	virtual void runEngine() = 0;
 	virtual std::string getResult() = 0;
 
-private:
+protected:
 	std::shared_ptr<EngineInterface> ptr;
 };
 
