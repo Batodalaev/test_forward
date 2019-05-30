@@ -102,4 +102,7 @@
       <Filter>Исходные файлы\Engine</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Readme.md" />
+  </ItemGroup>
 </Project>
