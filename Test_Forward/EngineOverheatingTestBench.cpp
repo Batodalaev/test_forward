@@ -6,7 +6,6 @@ EngineOverheatingTestBench::EngineOverheatingTestBench()
 {
 }
 
-
 EngineOverheatingTestBench::~EngineOverheatingTestBench()
 {
 }
@@ -23,7 +22,6 @@ void EngineOverheatingTestBench::runEngine()
 	ptr->start();
 	while (!ptr->isOverheated())
 		ptr->updatePerSecond();
-
 }
 
 std::string EngineOverheatingTestBench::getResult()

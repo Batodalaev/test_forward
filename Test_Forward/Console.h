@@ -17,10 +17,8 @@ public:
 	T& read();
 	template<class T>
 	void write(T& data);
-
 	template<class T>
 	void writeln(T& data);
-
 	void writeln();
 
 	void clear();

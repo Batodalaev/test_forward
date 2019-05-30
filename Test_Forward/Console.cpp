@@ -8,7 +8,6 @@ Console::Console()
 	out = &std::cout;
 }
 
-
 Console::~Console()
 {
 	in = nullptr;

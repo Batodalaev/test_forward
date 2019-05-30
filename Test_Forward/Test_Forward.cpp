@@ -53,46 +53,67 @@ double computeTcur(double Tcur0, double Vn, double Vc)
 
 int main()
 {
-    
-	//Запуск менеджера тестов
 	TestManager manager;
-	manager.chooseTest();
+	bool isStopped = false;
 
-	//std::vector<std::array<int, 2>> MfromV { {0, 20}, { 75,75 }, { 150,100 }, { 200,105 }, { 250,75 }, { 300,0 } };
-	//int I =(10);
-	//double Hm=(0.01);
-	//double Hv=(0.0001);
-	//double C=(0.1);
-	//int Toverheat=(110);
-	//int Toutside;
+	//Запуск менеджера тестов
+	while (!isStopped)
+	{
 
-	//while (true) {
+		manager.chooseTest();
 
-	//	std::cout << "Input Toutside: ";
-	//	std::cin >> Toutside;
+		std::cout << ">If you want to quit, type quit, otherwise type any symbols" << std::endl;
+		std::string buf;
+		std::cin >> buf;
+		if (buf.compare("quit") == 0)
+			isStopped = true;
+		system("cls");
+		std::cin.clear();
+	}
+	isStopped = false;
+	//Простая версия требуемой программы
+	while (!isStopped) 
+	{
+		std::vector<std::array<int, 2>> MfromV{ {0, 20}, { 75,75 }, { 150,100 }, { 200,105 }, { 250,75 }, { 300,0 } };
+		int I = (10);
+		double Hm = (0.01);
+		double Hv = (0.0001);
+		double C = (0.1);
+		int Toverheat = (110);
+		int Toutside;
 
-	//	long long Count = 0;
-	//	double Tcur = Toutside;
-	//	double V = 0;
-	//	double M = computeM(V, MfromV);
-	//	double a = computea(M, I);
-	//	double Vn = computeVn(M, Hm, V, Hv);
-	//	double Vc = 0;// computeVc(C, Toutside, Tcur);
+		std::cout << "Simple test"<<std::endl;
+		std::cout << "Input Toutside: ";
+		std::cin >> Toutside;
 
-	//	while (Tcur < Toverheat) {
-	//		Count++;
-	//		Tcur = computeTcur(Tcur, Vn, Vc);
-	//		V = computeV(V, a);
-	//		M = computeM(V, MfromV);
-	//		a = computea(M, I);
-	//		Vn = computeVn(M, Hm, V, Hv);
-	//		Vc = computeVc(C, Toutside, Tcur);
-	//		std::cout << Tcur << std::endl;
-	//	}
-	//	std::cout << Count << " seconds" << std::endl << std::endl;
+		long long Count = 0;
+		double Tcur = Toutside;
+		double V = 0;
+		double M = computeM(V, MfromV);
+		double a = computea(M, I);
+		double Vn = computeVn(M, Hm, V, Hv);
+		double Vc = 0;// computeVc(C, Toutside, Tcur);
 
-	//}
+		while (Tcur < Toverheat) {
+			Count++;
+			Tcur = computeTcur(Tcur, Vn, Vc);
+			V = computeV(V, a);
+			M = computeM(V, MfromV);
+			a = computea(M, I);
+			Vn = computeVn(M, Hm, V, Hv);
+			Vc = computeVc(C, Toutside, Tcur);
+			//std::cout << Tcur << std::endl;
+		}
+		std::cout << Count << " seconds" << std::endl << std::endl;
+
+		std::cout << ">If you want to quit, type quit, otherwise type any symbols" << std::endl;
+		std::string buf;
+		std::cin >> buf;
+		if (buf.compare("quit") == 0)
+			isStopped = true;
+	}
 	system("pause");
+	system("cls");
 	return 0;
 }
 

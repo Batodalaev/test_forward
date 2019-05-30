@@ -19,7 +19,6 @@ bool FileReader::isOpen()
 void FileReader::fillSimpleICEngine(std::shared_ptr<EngineInterface>& engine)
 {
 	std::shared_ptr<SimpleICEngine> sice = std::dynamic_pointer_cast<SimpleICEngine>(engine);
-	//WHy bad cast? //std::reinterpret_pointer_cast<SimpleICEngine, EngineInterface>(engine);
 	try {
 		int I = read<int>("I");
 		std::vector<int> arrayM = std::move(read<std::vector<int>>("M"));
@@ -29,18 +28,13 @@ void FileReader::fillSimpleICEngine(std::shared_ptr<EngineInterface>& engine)
 		double Hv = read<double>("Hv");
 		double C = read<double>("C");
 
-
 		sice->setI(I);
-
 		sice->setMfromV(arrayM, arrayV);
-
 		sice->setHm(Hm);
 		sice->setHv(Hv);
 		sice->setC(C);
-
 	}
 	catch (std::exception e) {
 		throw e;
 	}
-
 }

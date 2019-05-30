@@ -1,7 +1,5 @@
 #pragma once
 
-
-
 #include<iostream>
 #include<sstream>
 #include <fstream>
@@ -10,7 +8,6 @@
 #include <string>
 
 #include "SimpleICEngine.h"
-
 
 /*
 Класс - просмотрщик файлов, прослойка между файловой системой и программой.
@@ -27,7 +24,6 @@ public:
 
 	template<class T>
 	T read(std::string nameValue);
-
 	template<>
 	std::vector<int> read<std::vector<int>>(std::string nameValue);
 
@@ -68,14 +64,4 @@ inline std::vector<int> FileReader::read(std::string nameValue)
 	std::getline(fin,line);
 	return std::vector<int>(std::istream_iterator<int>(stay(std::istringstream(line))),
 		std::istream_iterator<int>());
-
-	/*int buf;//incorrect probably
-	while (fin >> buf) {
-		value.push_back(buf);
-	}*/
-	/*std::istringstream ss(line);
-	std::istream_iterator<int> begin(ss), end;
-	std::vector<int> value(begin, end);
-	return value;
-	*/
 }

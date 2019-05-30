@@ -6,7 +6,6 @@ TestBenchCreator::TestBenchCreator()
 {
 }
 
-
 TestBenchCreator::~TestBenchCreator()
 {
 }

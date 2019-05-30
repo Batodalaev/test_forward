@@ -1,6 +1,11 @@
 #pragma once
 
 #include "EngineInterface.h"
+/*
+Класс - абстрактный класс тестового стенда
+
+Цель класса: Использование TestBenchCreator-ом в качестве базового класса производимых стендов.
+*/
 class AbstractTestBench
 {
 public:

@@ -138,8 +138,7 @@ long long SimpleICEngine::getSimulationTimeinSeconds()
 
 int SimpleICEngine::getTcur()
 {
-	//округлить в большую сторону - std::ceil
-	//в меньшую сторону - std::floor
+	//округлить в меньшую сторону - std::floor
 	return std::floor(Tcur);
 }
 
@@ -184,7 +183,6 @@ double SimpleICEngine::computeV(double V0, double a)
 double SimpleICEngine::computeM(double V, std::vector<int> &arrayM, std::vector<int> &arrayV)
 {
 	if (arrayV.size() != arrayM.size())return 0;
-	//TODO проверить алгоритм на правильность
 	for (int i = 1; i < arrayM.size(); i++) {
 		if (V < arrayV[i])
 		{
@@ -198,7 +196,7 @@ double SimpleICEngine::computeM(double V, std::vector<int> &arrayM, std::vector<
 			return M;
 		}
 	}
-	//≈сли V>max_V(MfromV)
+	//≈сли V>arrayV[arrayV.size()-1]
 	return arrayM[arrayM.size() - 1];
 }
 

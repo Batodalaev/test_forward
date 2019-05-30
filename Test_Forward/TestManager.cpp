@@ -32,11 +32,11 @@ void TestManager::chooseTest()
 	else {
 		console.writeln(">Wrong test number");
 	}
-	console.pause();
-	console.clear();
+	//console.pause();
+	//console.clear();
 }
 
-void TestManager::runTest(Test test)
+void TestManager::runTest(TestData test)
 {
 	console.writeln<std::string>(std::string(">Find engine " + test.idEngine));
 	std::shared_ptr<EngineInterface> engine = engineCreator.getEngineInterface(test.idEngine);

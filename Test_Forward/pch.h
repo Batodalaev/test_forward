@@ -9,9 +9,12 @@
 #ifndef PCH_H
 #define PCH_H
 
-#include <iostream>
+#include<iostream>
+#include<sstream>
 #include <fstream>
 #include <vector>
 #include <array>
+#include <iterator>
+#include <string>
 
 #endif //PCH_H
